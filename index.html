@@ -30,6 +30,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./index.js"></script>
 
     <title>Portfolio</title>
   </head>
@@ -72,6 +73,7 @@
       </nav>
     </header>
     <main>
+      <!-- landing section -->
       <section class="landing section" id="landing">
         <div class="container-fluid landing-inner" ">
           <div class="img-container">
@@ -101,6 +103,7 @@
         </div>
 
       </section>
+      <!-- projects section -->
       <section class="projects section" id="projects">
         <div class="container  projects-inner">
           <h2 class="text-center">My Projects</h2>
@@ -112,11 +115,15 @@
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">Social Media App</h3>
+                </div>
               </div>
               <div class="btn-container project-btn-container">
                 <a href="https://techconnect-rishi.herokuapp.com/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="https://github.com/rishi-611/Social-media-app"  class="btn btn-sm btn-project" target="_blank">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="https://github.com/rishi-611/Social-media-app"  class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
                 <button class="btn btn-sm btn-project">
@@ -125,17 +132,24 @@
               </div>
             </li>
             <li class="project">
-              <div>
+              <div >
                 <img
                   src="./assets/img/projects/chat-app.png"
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">
+                    Chat App
+                  </h3>
+                </div>
               </div>
+
               <div class="btn-container project-btn-container">
                 <a href="https://chat-app-rishi.herokuapp.com/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="https://github.com/rishi-611/chat-app" class="btn btn-sm btn-project" target="_blank">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="https://github.com/rishi-611/chat-app" class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
                 <button class="btn btn-sm btn-project">
@@ -150,11 +164,17 @@
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">
+                    Markdown Previewer
+                  </h3>
+                </div>
               </div>
               <div class="btn-container project-btn-container">
                 <a href="https://markstuffdown.netlify.app/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="https://github.com/rishi-611/markdowm-previewer" class="btn btn-sm btn-project" target="_blank">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="https://github.com/rishi-611/markdowm-previewer" class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
                 <button class="btn btn-sm btn-project">
@@ -169,11 +189,17 @@
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">
+                    Drum Machine
+                  </h3>
+                </div>
               </div>
               <div class="btn-container project-btn-container">
                 <a href="https://drum-machine-rishi.netlify.app/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="https://github.com/rishi-611/drum-machine" class="btn btn-sm btn-project" target="_blank">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="https://github.com/rishi-611/drum-machine" class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
                 <button class="btn btn-sm btn-project">
@@ -188,11 +214,17 @@
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">
+                    Weather Forecast
+                  </h3>
+                </div>
               </div>
               <div class="btn-container project-btn-container">
                 <a href="https://weather-forecast-rishi.herokuapp.com/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="
                 https://github.com/rishi-611/weather-forecast" class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
@@ -208,11 +240,17 @@
                   alt="thumbnail"
                   class="thumbnail"
                 />
+                <div class="overlay">
+                  <h3 class="project-title text-center">
+                    Pomodoro Clock
+                  </h3>
+                </div>
               </div>
               <div class="btn-container project-btn-container">
                 <a href="https://sessionclock.netlify.app/" class="btn btn-sm btn-project" target="_blank">
-                  <i class="bi bi-globe"></i></
-                ><a href="https://github.com/rishi-611/session-management-clock" class="btn btn-sm btn-project" target="_blank">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="https://github.com/rishi-611/session-management-clock" class="btn btn-sm btn-project" target="_blank">
                   <i class="bi bi-github"></i>
                 </a>
                 <button class="btn btn-sm btn-project">
@@ -261,26 +299,23 @@
 
       </section>
       <section class="contact section" id="contact">
-        <div class="container contact-inner">
+        <div class="container-fluid contact-inner">
           <h2 class="text-center">
             Contact Me
           </h2>
 
           <form id="contact-form" class="contact-forn">
             <div class="form-group">
-              <div class="form-floating ">
-                <input type="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">
-                <label for="name">Your Name</label>
-              </div>
-              <div class="form-floating my-3">
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required autocomplete="off">
-                <label for="email">Your Email</label>
-              </div>
+              <label for="name">Name</label>
+              <input type="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">
+
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required autocomplete="off">
             </div>
-              <div class="form-floating">
-                <textarea class="form-control message" rows="10" placeholder="Leave a message here" id="message" required></textarea>
-                <label for="message">Say Something...</label>
-              </div>
+            <label for="message">Send me a message</label>
+                <textarea class="form-control message" rows="5" placeholder="Leave a message here" id="message" required></textarea>
+
+
               <button class="btn btn-orange">Send</button>
           </form>
           <div class="contact-links-outer text-center">
