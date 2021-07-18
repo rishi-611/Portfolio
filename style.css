@@ -1,7 +1,7 @@
 :root {
   --darker: #272727;
   --dark: #333333;
-  --light: #d6d6d6;
+  --light: #fefefe;
   --primary: #ff652f;
   --primary-light: #fd9c79;
   --secondary: #febe44;
@@ -79,18 +79,68 @@ li {
 
 /* navbar */
 
-.navbar {
-  background: transparent;
+.navbar-collapse.in {
+  display: block !important;
+}
+
+.navbar-toggler {
+  z-index: 1200;
+  margin-left: auto;
+  margin-right: 1rem;
+  transition: all 0.5s ease-out;
+}
+
+/* overlay */
+
+.overlay {
+  z-index: 1000;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.overlay-bg {
+  z-index: 0;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay,
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-out;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar,
+.navbar-dark,
+.bg-dark {
+  background: transparent !important;
+}
+
+.nav-overlay {
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .nav-link {
-  color: var(--light);
+  color: var(--light) !important;
   font-weight: 500;
 }
 
 .nav-link:focus,
 .nav-link:hover {
-  color: var(--primary-light);
+  color: var(--primary-light) !important;
 }
 
 /* landing */
@@ -99,15 +149,13 @@ li {
   padding: auto;
 }
 
-.landing,
-.about {
+.landing {
   background: var(--gradient);
   display: flex;
   align-items: center;
 }
 
-.landing-inner,
-.about-inner {
+.landing-inner {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   justify-content: center;
@@ -205,12 +253,13 @@ li {
 }
 
 .projects h2 {
+  margin-top: 0.5rem;
   padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--light-tertiary);
 }
 
 .projects ul {
-  margin-top: 1.2rem;
+  margin: 1.2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
@@ -236,7 +285,7 @@ li {
   bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: var(--light);
   opacity: 0;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -292,6 +341,10 @@ ul .project-list {
   transform: scale(1.5);
 }
 
+.more-projects .btn {
+  margin: 0.4rem auto 1rem auto;
+}
+
 /* about */
 
 .about {
@@ -299,32 +352,94 @@ ul .project-list {
   color: var(--primary);
 }
 
-.about h2,
-.contact h2 {
-  border-bottom: 1px solid var(--light);
-  padding-bottom: 0.7rem;
-}
-
-.about p {
-  font-weight: 300;
-  color: var(--light);
-  margin-bottom: 0.8rem;
-  max-width: 1100px;
-}
-
-.about .about-highlight {
-  font-weight: 500;
-  color: var(--primary-light);
+.about h2 {
+  padding-top: 0.75rem;
 }
 
 .about-inner {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: calc(100vh - 70px);
+  max-width: 1400px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.about-image-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about img {
+  max-width: 200px;
+  border-radius: 50% 0 0 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.about .text-container p {
+  /* letter-spacing: 0.05rem; */
+  margin-top: 0.8rem;
+  /* text-align: center; */
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--light);
+  max-width: 1100px;
+  text-align: right;
+}
+
+.about .about-highlight {
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+/* skillset */
+
+.skillset {
+  color: var(--light);
+  width: 90%;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
+.about .heading {
+  color: var(--primary-light);
+}
+
+.about {
+  padding-bottom: 1.5rem;
+}
+
+.about .heading,
+.skills-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+/* .about-inner {
   grid-template-columns: auto 1fr;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
+}  */
+
+/* about second style */
 
 /* contact section */
+.contact h2,
+.about h2 {
+  border-bottom: 1px solid var(--light);
+  padding-bottom: 0.7rem;
+}
+
 .contact {
   background-color: var(--primary);
 }
@@ -388,7 +503,8 @@ label {
 }
 
 .contact h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
   font-weight: 500;
 }
 

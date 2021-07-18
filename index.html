@@ -24,31 +24,49 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- scripts -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script defer src="./index.js"></script>
 
     <title>Portfolio</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-sm fixed-top">
-        <div class="container-md">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarsExample04"
-            aria-controls="navbarsExample04"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark nav-overlay">
+        <!-- <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample04"
+        aria-controls="navbarsExample04"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class="navbar-toggler " id="navbar-toggler">
+        <i id="ham" class="bi bi-list"></i>
+        <i id="close" class="bi bi-x-circle d-none"></i>
+      </button>
+
+      <div class="overlay d-none" id="overlay">
+        <ul class="small-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#landing">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="overlay-bg d-none" id="overlay-bg"></div>
+
 
           <div
             class="collapse navbar-collapse justify-content-center"
@@ -69,7 +87,7 @@
               </li>
             </ul>
           </div>
-        </div>
+
       </nav>
     </header>
     <main>
@@ -272,8 +290,8 @@
 
       <!-- about section -->
       <section class="about section" id="about">
-        <div class="container about-inner" ">
-          <div class="img-container">
+        <div class="container-fluid about-inner" ">        
+          <!-- <div class="img-container">
             <div class="image-inner">
               <img
                 src="./assets/img/self.png"
@@ -293,6 +311,98 @@
             </div>
             
             
+            </div> -->
+            <h2 class="text-center">About</h2>
+            <div class="about-content">
+              <div class="skillset">
+                <div class="skillset-inner">
+                  <div class="heading">
+                    <h3 >What I Know</h3>
+                    <div>
+                      <i class="bi bi-list-check"></i>
+                    </div>
+                  </div>
+                  <ul class="skills-list">
+                    <li>
+                      <p>HTML</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>CSS</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>JavaScript</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>bootstrap</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>React</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Redux</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Node.js</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Express</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Mongodb</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Jest</p>
+                      <div>
+                        <i class="bi bi-check"></i>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="my-intro">
+                <div class="about-image-inner">
+                  <img
+                    src="./assets/img/self.png"
+                    class="myPicture"
+                    alt="my Picture"
+                  />
+                </div>
+                <div class="text-container">
+                  <p>I am a <span class="about-highlight">Full Stack Web Developer</span>, from Delhi, India.</p>
+                  <p>I aim towards making all my websites fast, appealing, responsive and secure.</p>
+
+                  <p>But at the end of the day, Your <span class="about-highlight">Dream Website</span> is my <span class="about-highlight">ultimate goal</span> !</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

@@ -1,32 +1,42 @@
-// "use strict";
+"use strict";
 
-// const thumbnails = document.querySelectorAll(".thumbnail");
-// const projectTitle = document.querySelectorAll(".project-title");
+const navLinks = document.querySelectorAll(".overlay .nav-link");
+const toggler = document.querySelector("#navbar-toggler");
+const overlay = document.querySelector("#overlay");
+const overlayBg = document.querySelector("#overlay-bg");
+const hamIcon = document.querySelector("#ham");
+const closeIcon = document.querySelector("#close");
 
-// const onThumbnailHover = (i) => {
-//   if (!thumbnails[i].classList.contains("blur")) {
-//     thumbnails[i].classList.add("blur");
-//   }
-//   if (projectTitle[i].classList.contains("d-none")) {
-//     projectTitle[i].classList.remove("d-none");
-//   }
-// };
+let isNavOn = false;
 
-// const undoThumbnailHover = (i) => {
-//   if (thumbnails[i].classList.contains("blur")) {
-//     thumbnails[i].classList.remove("blur");
-//   }
-//   if (!projectTitle[i].classList.contains("d-none")) {
-//     projectTitle[i].classList.add("d-none");
-//   }
-// };
+const openNav = () => {
+  overlay.classList.remove("d-none");
+  overlayBg.classList.remove("d-none");
+  hamIcon.classList.add("d-none");
+  closeIcon.classList.remove("d-none");
+};
 
-// thumbnails.forEach((thumbnail, i) => {
-//   thumbnail.addEventListener("hover", () => {
-//     onThumbnailHover(i);
-//   });
+const closeNav = () => {
+  overlay.classList.add("d-none");
+  overlayBg.classList.add("d-none");
+  hamIcon.classList.remove("d-none");
+  closeIcon.classList.add("d-none");
+};
 
-//     thumbnail.addEventListener("mouseout", () => {
-//       undoThumbnailHover(i);
-//     });
-// });
+const toggleNav = () => {
+  isNavOn ? closeNav() : openNav();
+  isNavOn = !isNavOn;
+};
+
+toggler.addEventListener("click", toggleNav);
+
+navLinks.forEach((navLink) =>
+  navLink.addEventListener("click", () => {
+    toggleNav();
+  })
+);
+
+if (window.screen.width > 575) {
+  closeNav();
+  isNavOn = false;
+}
