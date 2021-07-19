@@ -6,6 +6,11 @@ const overlay = document.querySelector("#overlay");
 const overlayBg = document.querySelector("#overlay-bg");
 const hamIcon = document.querySelector("#ham");
 const closeIcon = document.querySelector("#close");
+const phoneBox = document.querySelector("#phone-container");
+const copyBtn = document.querySelector("#copy");
+const phoneBtn = document.querySelector("#phone-btn");
+
+// toggle navigation on small screen
 
 let isNavOn = false;
 
@@ -40,3 +45,20 @@ if (window.screen.width > 575) {
   closeNav();
   isNavOn = false;
 }
+
+// toggle phone number display
+
+let isPhoneDisplayed = false;
+
+const togglePhoneDisplay = () => {
+  if (isPhoneDisplayed) {
+    phoneBox.classList.add("d-none");
+  } else {
+    phoneBox.classList.remove("d-none");
+    phoneBox.scrollIntoView();
+  }
+
+  isPhoneDisplayed = !isPhoneDisplayed;
+};
+
+phoneBtn.addEventListener("click", togglePhoneDisplay);
