@@ -275,7 +275,7 @@ li {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0 10px var(--dark-tertiary);
-  padding: 0.8rem;
+  padding: 1rem;
 }
 
 .projects li div {
@@ -607,13 +607,13 @@ input:-webkit-autofill:active {
   }
 
   .projects li {
-    padding: 0.4rem;
+    padding: 0.6rem;
   }
 }
 
 @media (max-width: 700px) {
   .img-container {
-    padding-right: 0.6rem;
+    padding-right: 0;
     justify-content: center;
   }
 
@@ -721,7 +721,7 @@ input:-webkit-autofill:active {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 635px) {
   .landing-inner,
   .about-inner {
     grid-template-columns: 1fr;
@@ -750,7 +750,14 @@ input:-webkit-autofill:active {
   }
 }
 
+@media (max-width: 500px) {
+}
+
 @media (max-width: 400px) {
+  .landing h1 {
+    font-size: 3rem;
+  }
+
   .projects ul {
     margin-top: 1.2rem;
     display: grid;

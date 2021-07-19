@@ -21,6 +21,7 @@ const openNav = () => {
   overlayBg.classList.remove("d-none");
   hamIcon.classList.add("d-none");
   closeIcon.classList.remove("d-none");
+  toggler.ariaHidden = "false";
 };
 
 const closeNav = () => {
@@ -28,6 +29,7 @@ const closeNav = () => {
   overlayBg.classList.add("d-none");
   hamIcon.classList.remove("d-none");
   closeIcon.classList.add("d-none");
+  toggler.ariaHidden = "true";
 };
 
 const toggleNav = () => {
@@ -46,6 +48,8 @@ navLinks.forEach((navLink) =>
 if (window.screen.width > 575) {
   closeNav();
   isNavOn = false;
+} else {
+  toggler.ariaHidden = "false";
 }
 
 // toggle phone number display
